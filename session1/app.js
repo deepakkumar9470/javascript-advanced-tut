@@ -69,17 +69,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /***** Find chunked array  chunk(arr,n) of size n at least *****/
 
 // var arr =  [1,2,4,5,12,33,6,0,23] n = 3
@@ -298,3 +287,52 @@
 // }
 
 // console.log(compression('aabbccdd'))
+
+
+/*****Given two  Strings, write a method to determine
+ * if they are one edit away from each other *****/
+
+// insert,repplace,remove 
+// (pale, ple) --> true -- insert 'a'
+// (pale, kale) --> true -- replace 'k' with 'p'
+// (pale, pales) --> true -- remove 's'
+
+// Step 1 :Check strings are same
+// Step 2 :Create character map of both string
+// Step 3 :Check each character of same type and value
+            // if they are not, increase the counter
+// Step 4: If the counter is 2 or more, return false
+// step 5: return true 
+
+// const isObj = (str)=>{
+//     let obj ={}
+//     for(let i of str){
+//         (!obj[i] ? obj[i] = 1 : obj[i]++)
+//     }
+//     return obj
+// }
+
+// function oneway(str1, str2){
+//     if(str1=== str2) return false
+
+//      const obj1 = isObj(str1)
+//      const obj2 = isObj(str2)
+//      let counter = 0
+
+//      for(let i in obj1){
+//         if(obj1[i] !== obj2[i])
+//         {
+//             counter++
+//         }
+//         else if(counter >= 2)
+//           {
+//             return false
+//           }
+//      }
+
+//      return true
+    
+
+// }
+
+// console.log(oneway('pale', 'ple'))
